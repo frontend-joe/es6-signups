@@ -23,7 +23,7 @@ body {
   background-repeat: no-repeat;
   background-size: 200vh;
   font-family: "Euclid Circular A";
-  color: #3a334e;
+  color: #868b94;
   animation: rotate 5s infinite alternate linear;
 }
 
@@ -40,10 +40,9 @@ button {
   width: 100%;
   height: 56px;
   padding: 0 16px;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #5a4f79;
+  color: #f9f9f9;
   margin: 8px 0;
   font-family: inherit;
   text-align: left;
@@ -53,11 +52,11 @@ button {
 
 .login-card {
   width: 400px;
-  padding: 100px 30px 64px;
+  padding: 100px 30px 32px;
   border-radius: 1.25rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(26px);
   text-align: center;
-  backdrop-filter: blur(10px);
 }
 
 .login-card > h2 {
@@ -72,6 +71,7 @@ button {
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.4);
   padding: 5px;
+  margin-bottom: 20px;
 }
 
 .login-card > h3 {
@@ -88,7 +88,7 @@ button {
 }
 
 .login-form input.control::placeholder {
-  color: #aaa7bc;
+  color: #868b94;
 }
 
 .login-form > button.control {
@@ -135,15 +135,47 @@ button {
   opacity: 1;
 }
 
-.alert {
-  overflow: hidden;
-  text-align: left;
-  padding: 0 16px;
-  color: #ff3e72;
-  height: 0;
-  transition: 0.3s;
+.indicator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.alert.visible {
-  height: 32px;
+#bars {
+  margin: 8px 0;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#bars div {
+  height: 6px;
+  border-radius: 3px;
+  transition: 0.4s;
+  width: 0%;
+}
+
+#bars.weak div {
+  background: #bc2b38;
+  width: 33.33%;
+}
+
+#bars.medium div {
+  background: #d36f30;
+  width: 66.66%;
+}
+
+#bars.strong div {
+  background: #1eb965;
+  width: 100%;
+}
+
+.strength {
+  text-align: left;
+  height: 30px;
+  text-transform: capitalize;
 }

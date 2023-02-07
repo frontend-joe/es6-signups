@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Login 1</title>
+    <title>Signup 2</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="login-card">
       <img
-        src="https://pub-static.fotor.com/assets/projects/pages/5ff61721271e45d2b9bbc6dbbd4b14c7/300w/purple-cute-school-girl-78a8ba2c107c4ce1bb7e5a3de0ed9528.jpg"
+        src="https://i.pinimg.com/originals/0a/5f/ea/0a5feae400fc816c4ca2aca8bd67a168.jpg"
       />
-      <h2>Login</h2>
+      <h2>Sign Up</h2>
       <h3>Enter your credentials</h3>
       <form class="login-form">
         <div class="username">
           <input
+            autocomplete="off"
             spellcheck="false"
             class="control"
-            type="text"
-            placeholder="Username"
-            onkeyup="handleChange(event)"
-            onkeydown="handleStartTyping()"
+            type="email"
+            placeholder="Email"
+            value="joe@gmail.com"
           />
           <div id="spinner" class="spinner"></div>
         </div>
-        <div id="alert" class="alert">Username already exists</div>
         <input
           spellcheck="false"
           class="control"
           id="password"
           type="password"
           placeholder="Password"
+          onkeyup="handleChange()"
         />
-        <button class="control" type="button">LOGIN</button>
+        <div id="bars">
+          <div></div>
+        </div>
+        <div class="strength" id="strength"></div>
+        <button class="control" type="button">JOIN NOW</button>
       </form>
     </div>
     <script type="text/javascript" src="main.js"></script>

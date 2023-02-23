@@ -20,12 +20,13 @@
           <!-- Slides -->
           <div class="swiper-slide">
             <img src="1.svg" />
-            <h2>Hey there!</h2>
+            <h2>Welcome</h2>
             <h3>Let's create your username</h3>
             <input
+              spellcheck="false"
               oninput="checkValid(event)"
               type="text"
-              placeholder="Something cool"
+              placeholder="e.g. johnsmith"
             />
             <button disabled type="button" onclick="gotoSlide(1)">Next</button>
           </div>
@@ -38,7 +39,7 @@
             <input
               oninput="checkValid(event)"
               type="password"
-              placeholder="Something secure"
+              placeholder="Your password"
             />
             <button disabled type="button" onclick="gotoSlide(2)">Next</button>
           </div>
@@ -47,7 +48,7 @@
               <img src="3.svg" />
             </div>
             <h2>Finish</h2>
-            <h3>You're all set and ready</h3>
+            <h3>You're all good to go</h3>
             <button type="submit">Complete</button>
             <button class="secondary" onclick="restart()">Restart</button>
           </div>

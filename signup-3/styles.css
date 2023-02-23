@@ -11,7 +11,7 @@ body {
   margin: 0;
   display: grid;
   place-items: center;
-  background: #ffffff;
+  background: #faf8ff;
   font-family: "Euclid Circular A";
   text-align: center;
 }
@@ -19,21 +19,19 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 500px;
+  width: 360px;
+  height: 490px;
   padding: 80px 0 0;
   border-radius: 10px;
   background: #ffffff;
-  box-shadow: 0px -6.8px 9.8px rgba(0, 0, 0, 0.003),
-    0px -10.8px 23.5px rgba(0, 0, 0, 0.008),
-    0px -10.3px 44.3px rgba(0, 0, 0, 0.016),
-    0px -1.5px 79.1px rgba(0, 0, 0, 0.026),
-    0px 28.5px 147.9px rgba(0, 0, 0, 0.042), 0px 174px 354px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 20px 150px rgb(0 0 0 / 5%);
 }
 
 img {
-  margin: 0 auto;
-  width: 160px;
+  margin: 0 auto 30px;
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
 }
 
 h2 {
@@ -52,8 +50,9 @@ h3 {
 input,
 button {
   display: block;
-  height: 44px;
-  margin: 0 70px;
+  height: 48px;
+  width: 270px;
+  margin: 0 40px;
   border-radius: 4px;
   font-size: 16px;
   font-family: inherit;
@@ -73,7 +72,7 @@ input::placeholder {
 }
 
 button {
-  background: #6b63ff;
+  background: #9563ff;
   color: #f9f9f9;
   border: 0;
   cursor: pointer;
@@ -87,7 +86,7 @@ button:disabled {
 }
 
 button.secondary {
-  background: #f0f0f6;
+  background: transparent;
   color: #7e7d8a;
 }
 
@@ -97,25 +96,4 @@ button[type="submit"] {
 
 .swiper {
   width: 100%;
-}
-
-.swiper-slide {
-  display: grid;
-}
-
-.swiper .swiper-pagination .swiper-pagination-bullet {
-  box-shadow: none;
-  background: #864dfb;
-  width: 16px;
-  height: 16px;
-}
-
-.swiper-horizontal .swiper-pagination-bullets.swiper-pagination-horizontal {
-  top: auto;
-  bottom: 56px;
-}
-
-.swiper-slide img {
-  height: 170px;
-  margin-bottom: 10px;
 }

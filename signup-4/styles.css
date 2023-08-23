@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+@keyframes rotate {
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  background: #e8f2f7;
+  font-family: "Euclid Circular A", "Poppins";
+  color: #3a334e;
+  animation: rotate 1s infinite alternate linear;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.control {
+  border: 0;
+  outline: none;
+  width: 100%;
+  height: 56px;
+  padding: 0 56px 0 16px;
+  border-radius: 6px;
+  background: #f4f5f7;
+  color: #5a4f79;
+  font-family: inherit;
+  font-size: 18px;
+  transition: 0.4s;
+}
+
+.control:focus {
+  border-color: rgb(0 0 0 / 30%);
+}
+
+.card {
+  width: 400px;
+  padding: 60px 30px 38px;
+  border-radius: 1.25rem;
+  background: #ffffff;
+  text-align: center;
+}
+
+.card > img {
+  width: 240px;
+  margin-bottom: 20px;
+}
+
+.card > h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0 0 30px;
+}
+
+.form {
+  width: 100%;
+  margin: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.form input.control::placeholder {
+  color: #aaa7bc;
+}
+
+.form > button.control {
+  cursor: pointer;
+  width: 100%;
+  height: 56px;
+  padding: 0 16px;
+  background: #1c98dd;
+  color: #f9f9f9;
+  border: 0;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.375s;
+}
+
+.password {
+  position: relative;
+}
+
+.toggle {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  translate: 0 -50%;
+  width: 30px;
+  height: 30px;
+  background-image: url("show.svg");
+  background-size: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.toggle.showing {
+  background-image: url("hide.svg");
+}
